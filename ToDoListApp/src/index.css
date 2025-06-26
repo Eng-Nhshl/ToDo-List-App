@@ -1,0 +1,215 @@
+:root {
+  --primary-color: #2196F3;
+  --secondary-color: #424242;
+  --background-color: #ffffff;
+  --text-color: #212121;
+  --border-color: #e0e0e0;
+  --success-color: #4CAF50;
+  --error-color: #F44336;
+  --input-bg: #f5f5f5;
+}
+
+[data-theme="dark"] {
+  --primary-color: #2196F3;
+  --secondary-color: #ffffff;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --border-color: #333333;
+  --success-color: #4CAF50;
+  --error-color: #F44336;
+  --input-bg: #202020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.error, .success {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+}
+
+.error {
+  color: var(--error-color);
+  border-color: var(--error-color);
+}
+
+.success {
+  color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  color: var(--secondary-color);
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+ul {
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+.taskform {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: white;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--input-bg);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+}
+
+input[type="checkbox"]:hover {
+  border-color: var(--primary-color);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.delete {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.delete:hover {
+  background-color: darken(var(--error-color), 10%);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.delete {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.delete:hover {
+  background-color: darken(var(--error-color), 10%);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--input-bg);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background-color: var(--background-color);
+}
+
+li.completed {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  .taskform {
+    flex-direction: column;
+  }
+  
+  input {
+    width: 100%;
+  }
+}

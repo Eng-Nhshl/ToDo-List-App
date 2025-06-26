@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Doing The Tasks Backend Application.",
+  "completed": false
+}
